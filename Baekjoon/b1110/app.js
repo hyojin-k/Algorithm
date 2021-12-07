@@ -19,7 +19,7 @@ function solution(num) {
 
   // 기존 숫자가 새로운 숫자와 같아질때까지 동작
   while (num !== newNum) {
-    //  처음 시작할때
+    // 첫 사이클
     if (newNum === 0) {
       if (num < 10) {
         sum = num;
