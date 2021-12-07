@@ -32,7 +32,7 @@ function solution(num) {
       }
     }
 
-    // 한바퀴 돌고 난 후, newNum으로 사이클 돌기
+    // 첫 사이클 돌고 난 후, newNum으로 사이클 돌기
     else if (newNum !== 0 && newNum < 10) {
       sum = newNum;
       newNum = newNum * 10 + newNum;
