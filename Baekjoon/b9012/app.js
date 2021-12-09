@@ -2,6 +2,8 @@ const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let input = fs.readFileSync(filePath).toString().split("\n");
 
+// 알고리즘 분류 - 스택
+
 const num = +input[0];
 
 for (let i = 1; i <= num; i++) {
