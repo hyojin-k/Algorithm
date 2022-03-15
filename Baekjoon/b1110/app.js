@@ -1,9 +1,28 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-let input = fs.readFileSync(filePath).toString().split("\n");
+const fs = require('fs');
+const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+let input = fs.readFileSync(filePath).toString().split('\n');
 input = +input[0];
 
 solution(input);
+
+// 짧은 코드
+
+function solution(num) {
+  let initNum = num;
+  let count = 0;
+
+  while (true) {
+    let sum = Math.floor(num / 10) + (num % 10);
+    num = (num % 10) * 10 + (sum % 10);
+
+    count++;
+    if (initNum === num) break;
+  }
+
+  console.log(count);
+}
+
+// 내가 했던 방식
 
 function solution(num) {
   let newNum = 0;
